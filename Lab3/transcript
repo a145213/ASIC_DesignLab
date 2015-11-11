@@ -1,0 +1,34 @@
+# //  ModelSim SE-64 10.1b Apr 26 2012 Linux 2.6.32-431.23.3.el6.x86_64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim +no_glitch_msg -Lf /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -coverage -i -t ps source_work/.tb_flex_counter 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_flex_counter(fast)
+run -all
+# ** Info: Reset 1 PASSED
+#    Time: 8500 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 66
+# ** Info: Reset 2 PASSED
+#    Time: 17250 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 78
+# ** Info: Clear PASSED
+#    Time: 19750 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 92
+# ** Info: Testcase Flag  0 PASSED
+#    Time: 22500 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 120
+# ** Info: Testcase Flag  1 PASSED
+#    Time: 25 ns  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 120
+# ** Info: Testcase Flag  2 PASSED
+#    Time: 27500 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 120
+# ** Info: Testcase Flag  3 PASSED
+#    Time: 30 ns  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 120
+# ** Info: Testcase Flag  4 PASSED
+#    Time: 32500 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 120
+# ** Info: Testcase Clear  5 PASSED
+#    Time: 34750 ps  Scope: tb_flex_counter File: source/tb_flex_counter.sv Line: 137
+# Break key hit 
+# Break in Module tb_flex_counter at source/flex_counter.sv line 52

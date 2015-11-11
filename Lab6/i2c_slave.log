@@ -1,0 +1,537 @@
+Synthesizing design: i2c_slave.sv
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+dc_shell> dc_shell> Running PRESTO HDLC
+Searching for ./scl_edge.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/scl_edge.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/scl_edge.sv
+Searching for ./source/scl_edge.sv
+Searching for ./sda_sel.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/sda_sel.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/sda_sel.sv
+Searching for ./source/sda_sel.sv
+Searching for ./decode.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/decode.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/decode.sv
+Searching for ./source/decode.sv
+Searching for ./tx_fifo.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/tx_fifo.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/tx_fifo.sv
+Searching for ./source/tx_fifo.sv
+Searching for ./tx_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/tx_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/tx_sr.sv
+Searching for ./source/tx_sr.sv
+Searching for ./rx_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/rx_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/rx_sr.sv
+Searching for ./source/rx_sr.sv
+Searching for ./controller.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/controller.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/controller.sv
+Searching for ./source/controller.sv
+Searching for ./timer.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/timer.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/timer.sv
+Searching for ./source/timer.sv
+Searching for ./flex_counter.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/flex_counter.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/flex_counter.sv
+Searching for ./source/flex_counter.sv
+Searching for ./flex_stp_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/flex_stp_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/flex_stp_sr.sv
+Searching for ./source/flex_stp_sr.sv
+Searching for ./flex_pts_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/flex_pts_sr.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/flex_pts_sr.sv
+Searching for ./source/flex_pts_sr.sv
+Searching for ./i2c_slave.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/libraries/syn/i2c_slave.sv
+Searching for /package/eda/synopsys/syn-G-2012.06/dw/sim_ver/i2c_slave.sv
+Searching for ./source/i2c_slave.sv
+Compiling source file ./source/scl_edge.sv
+Compiling source file ./source/sda_sel.sv
+Compiling source file ./source/decode.sv
+Compiling source file ./source/tx_fifo.sv
+Compiling source file ./source/tx_sr.sv
+Compiling source file ./source/rx_sr.sv
+Compiling source file ./source/controller.sv
+Compiling source file ./source/timer.sv
+Compiling source file ./source/flex_counter.sv
+Compiling source file ./source/flex_stp_sr.sv
+Compiling source file ./source/flex_pts_sr.sv
+Compiling source file ./source/i2c_slave.sv
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-G-2012.06/libraries/syn/dw_foundation.sldb'
+1
+dc_shell> Loading db file '/package/eda/synopsys/syn-G-2012.06/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-G-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'i2c_slave'.
+Information: Building the design 'tx_fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'controller'. (HDL-193)
+
+Statistics for case statements in always block at line 54 in file
+	'./source/controller.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            63            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 45 in file
+		'./source/controller.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cur_state_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'timer'. (HDL-193)
+
+Statistics for case statements in always block at line 57 in file
+	'./source/timer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            67            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine timer line 49 in file
+		'./source/timer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cur_state_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'sda_sel'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rx_sr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine rx_sr line 23 in file
+		'./source/rx_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_clk_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'tx_sr'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'scl_edge'. (HDL-193)
+
+Inferred memory devices in process
+	in routine scl_edge line 46 in file
+		'./source/scl_edge.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      prev_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      curr_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      pprev_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decode'. (HDL-193)
+
+Inferred memory devices in process
+	in routine decode line 35 in file
+		'./source/decode.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sda_pprev_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      curr_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      prev_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    sda_prev_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    sda_curr_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      pprev_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'flex_counter' instantiated from design 'timer' with
+	the parameters "4". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_counter_NUM_CNT_BITS4 line 52 in file
+		'./source/flex_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  rollover_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    count_out_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_stp_sr' instantiated from design 'rx_sr' with
+	the parameters "8,1". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_stp_sr_NUM_BITS8_SHIFT_MSB1 line 22 in file
+		'./source/flex_stp_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parallel_out_reg   | Flip-flop |   8   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'flex_pts_sr' instantiated from design 'tx_sr' with
+	the parameters "8,1". (HDL-193)
+
+Inferred memory devices in process
+	in routine flex_pts_sr_NUM_BITS8_SHIFT_MSB1 line 25 in file
+		'./source/flex_pts_sr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   serial_out_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      data_reg       | Flip-flop |   7   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fiforam'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fiforam line 48 in file
+		'./Course_IP_VHDL/Fifo/source/fiforam.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fiforeg_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 76 in file
+		'./Course_IP_VHDL/Fifo/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wrptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wrptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 102 in file
+		'./Course_IP_VHDL/Fifo/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   full_flag_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 115 in file
+		'./Course_IP_VHDL/Fifo/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 75 in file
+		'./Course_IP_VHDL/Fifo/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rwptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rwptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 100 in file
+		'./Course_IP_VHDL/Fifo/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  empty_flag_r_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 114 in file
+		'./Course_IP_VHDL/Fifo/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_ptr line 79 in file
+		'./Course_IP_VHDL/Fifo/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_ptr line 89 in file
+		'./Course_IP_VHDL/Fifo/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_ptr line 79 in file
+		'./Course_IP_VHDL/Fifo/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_ptr line 89 in file
+		'./Course_IP_VHDL/Fifo/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+dc_shell> dc_shell> 1
+dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> 1
+dc_shell> dc_shell> dc_shell> Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        | G-2012.06-DWBB_201206.0 |     *     |
+============================================================================
+
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'decode'
+  Processing 'scl_edge'
+  Processing 'flex_pts_sr_NUM_BITS8_SHIFT_MSB1'
+  Processing 'tx_sr'
+  Processing 'flex_stp_sr_NUM_BITS8_SHIFT_MSB1'
+  Processing 'rx_sr'
+  Processing 'sda_sel'
+  Processing 'flex_counter_NUM_CNT_BITS4'
+Information: Added key list 'DesignWare' to design 'flex_counter_NUM_CNT_BITS4'. (DDB-72)
+  Processing 'timer'
+  Processing 'controller'
+  Processing 'read_ptr'
+  Processing 'read_fifo_ctrl'
+Information: Added key list 'DesignWare' to design 'read_fifo_ctrl'. (DDB-72)
+  Processing 'write_ptr'
+  Processing 'write_fifo_ctrl'
+Information: Added key list 'DesignWare' to design 'write_fifo_ctrl'. (DDB-72)
+  Processing 'fiforam'
+  Processing 'fifo'
+  Processing 'tx_fifo'
+  Processing 'i2c_slave'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_inc_width4'
+  Mapping 'flex_counter_NUM_CNT_BITS4_DW_mult_uns_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04  364077.0      0.64      57.0       0.0                          
+    0:00:04  364077.0      0.64      57.0       0.0                          
+    0:00:04  364077.0      0.64      57.0       0.0                          
+    0:00:04  364077.0      0.64      56.6       0.0                          
+    0:00:04  364077.0      0.64      56.6       0.0                          
+    0:00:04  364077.0      0.64      56.6       0.0                          
+    0:00:04  356733.0      0.66      56.6       0.0                          
+    0:00:04  357552.0      0.65      56.3       0.0                          
+    0:00:04  357876.0      0.61      54.6       0.0                          
+    0:00:04  358704.0      0.59      53.4       0.0                          
+    0:00:04  359208.0      0.59      53.5       0.0                          
+    0:00:04  359136.0      0.58      53.4       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359712.0      0.57      53.3       0.0                          
+    0:00:04  359856.0      0.54      49.4       0.0 FIFO/_FIFO/UFIFORAM/fiforeg_reg[0][0]/D
+    0:00:04  360504.0      0.54      46.6       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04  360504.0      0.54      46.6       0.0                          
+    0:00:04  361584.0      0.51      46.3       0.0 TIMER/CLK_CNT/count_out_reg[1]/D
+    0:00:04  363537.0      0.48      44.6       0.0 FIFO/_FIFO/UFIFORAM/fiforeg_reg[0][7]/D
+    0:00:04  364374.0      0.48      43.0       0.0 FIFO/_FIFO/UFIFORAM/fiforeg_reg[0][3]/D
+    0:00:05  364959.0      0.47      41.6       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  366327.0      0.46      41.9       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  366471.0      0.45      41.8       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  367632.0      0.44      42.0       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  369144.0      0.44      41.0       0.0 FIFO/_FIFO/UFIFORAM/fiforeg_reg[0][5]/D
+    0:00:05  371088.0      0.43      39.8       0.0 CONTROLLER/cur_state_reg[3]/D
+    0:00:05  372681.0      0.42      38.8       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  373185.0      0.41      37.0       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  374040.0      0.41      36.9       0.0 FIFO/_FIFO/UWFC/full_flag_r_reg/D
+    0:00:05  375444.0      0.40      36.0       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:05  376236.0      0.39      36.1       0.0                          
+    0:00:05  375660.0      0.39      36.0       0.0                          
+    0:00:06  375516.0      0.39      35.9       0.0                          
+    0:00:06  376740.0      0.39      34.7       0.0                          
+    0:00:06  377460.0      0.39      34.3       0.0                          
+    0:00:06  378000.0      0.39      33.5       0.0                          
+    0:00:06  378072.0      0.39      33.3       0.0                          
+    0:00:06  378792.0      0.39      33.1       0.0                          
+    0:00:06  379008.0      0.39      33.0       0.0                          
+    0:00:06  379224.0      0.39      32.6       0.0                          
+    0:00:06  379584.0      0.39      32.6       0.0                          
+    0:00:06  380448.0      0.39      31.8       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06  380448.0      0.39      31.8       0.0                          
+    0:00:06  380448.0      0.39      31.8       0.0                          
+    0:00:06  380448.0      0.39      31.8       0.0                          
+    0:00:06  375408.0      0.39      32.1       0.0                          
+    0:00:06  373968.0      0.41      32.7       0.0                          
+    0:00:06  373392.0      0.41      32.7       0.0                          
+    0:00:06  373248.0      0.41      32.7       0.0                          
+    0:00:06  373248.0      0.41      32.7       0.0                          
+    0:00:06  373248.0      0.41      32.7       0.0                          
+    0:00:06  373248.0      0.39      32.4       0.0                          
+    0:00:06  373248.0      0.39      32.4       0.0                          
+    0:00:06  373248.0      0.39      32.4       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:06  372456.0      0.41      32.8       0.0                          
+    0:00:07  372600.0      0.39      32.6       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:07  372456.0      0.38      33.1       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+    0:00:07  372321.0      0.37      33.0       0.0                          
+    0:00:07  371529.0      0.37      32.4       0.0                          
+    0:00:07  372249.0      0.37      31.8       0.0                          
+    0:00:07  372537.0      0.37      31.7       0.0                          
+    0:00:07  373113.0      0.37      31.6       0.0                          
+    0:00:07  373257.0      0.37      31.3       0.0                          
+    0:00:07  373617.0      0.37      31.3       0.0                          
+    0:00:07  372681.0      0.37      30.7       0.0                          
+    0:00:07  373185.0      0.37      30.7       0.0 FIFO/_FIFO/URFC/empty_flag_r_reg/D
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+  Optimization Complete
+  ---------------------
+1
+dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> dc_shell> Writing verilog file '/home/ecegrid/a/mg109/ece337/Lab6/mapped/i2c_slave.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+dc_shell> 
+Script Done
+
+dc_shell> 
+Checking Design
+
+dc_shell>  
+****************************************
+check_design summary:
+Version:     G-2012.06
+Date:        Wed Oct 22 18:34:53 2014
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Unconnected ports (LINT-28)                                     1
+    Feedthrough (LINT-29)                                           1
+
+Cells                                                               6
+    Connected to power or ground (LINT-32)                          4
+    Nets connected to multiple pins on same cell (LINT-33)          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'controller', port 'byte_received' is not connected to any nets. (LINT-28)
+Warning: In design 'decode', input port 'starting_byte[0]' is connected directly to output port 'rw_mode'. (LINT-29)
+Warning: In design 'timer', a pin on submodule 'CLK_CNT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[3]' is connected to logic 1. 
+Warning: In design 'timer', a pin on submodule 'CLK_CNT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[2]' is connected to logic 0. 
+Warning: In design 'timer', a pin on submodule 'CLK_CNT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[1]' is connected to logic 0. 
+Warning: In design 'timer', a pin on submodule 'CLK_CNT' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rollover_val[0]' is connected to logic 0. 
+Warning: In design 'tx_fifo', the same net is connected to more than one pin on submodule '_FIFO'. (LINT-33)
+   Net 'clk' is connected to pins 'r_clk', 'w_clk''.
+Warning: In design 'timer', the same net is connected to more than one pin on submodule 'CLK_CNT'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'rollover_val[2]', 'rollover_val[1]'', 'rollover_val[0]'.
+1
+dc_shell> 
+Thank you...
+Done
+
+

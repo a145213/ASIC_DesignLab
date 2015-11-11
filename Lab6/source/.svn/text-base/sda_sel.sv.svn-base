@@ -1,0 +1,29 @@
+// $Id: $
+// File name:   sda_sel.sv
+// Created:     10/6/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: SDA_Out Select Block Description
+
+module sda_sel (
+  input wire tx_out,
+  input wire [1:0] sda_mode,
+  output wire sda_out
+);
+
+reg sda;
+
+assign sda_out = sda;
+
+always_comb begin
+  if (sda_mode == 2'b01)
+    sda = 1'b0; 
+  else if (sda_mode == 2'b10)
+    sda = 1'b1;
+  else if (sda_mode == 2'b11)
+    sda = tx_out;
+  else sda = 1'b1;
+end
+
+endmodule

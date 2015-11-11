@@ -1,0 +1,160 @@
+// $Id: $
+// File name:   tb_decode.sv
+// Created:     10/7/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Decode Block Test Bench
+
+`timescale 1ns/10ps
+
+module tb_decode ();
+  
+  parameter CLK_PERIOD = 10;
+  
+  reg tb_clk;
+  reg tb_n_rst;
+  reg tb_scl;
+  reg tb_sda_in;
+  reg [7:0] tb_starting_byte;
+  reg tb_rw_mode;
+  reg tb_address_match; 
+  reg tb_stop_found;
+  reg tb_start_found;
+  
+  decode DUT(
+    .clk(tb_clk), 
+    .n_rst(tb_n_rst),
+    .scl(tb_scl),
+    .sda_in(tb_sda_in),
+    .starting_byte(tb_starting_byte),
+    .rw_mode(tb_rw_mode),
+    .address_match(tb_address_match),
+    .stop_found(tb_stop_found),
+    .start_found(tb_start_found)
+  );
+  
+  always 
+  begin : CLK_GEN
+    tb_clk = 1'b0;
+    #(CLK_PERIOD / 2);
+    tb_clk = 1'b1;
+    #(CLK_PERIOD / 2);
+  end
+  
+  
+  initial begin
+    // Initialize all inputs
+    tb_n_rst = 1'b1;
+    tb_scl = 1'b0;
+    tb_sda_in = 1'b1;
+    tb_starting_byte = 8'b11111111;
+     @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    tb_n_rst = 1'b0;
+    tb_scl = 1;
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    assert (tb_rw_mode == 1'b1 && tb_address_match == 1'b0
+            && tb_stop_found == 1'b0 && tb_start_found == 1'b0)
+      $info("Reset PASSED");
+    else 
+      $error("Reset FAILED");
+    
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    
+    @(posedge tb_clk);
+    tb_n_rst = 1'b1;
+    tb_sda_in = 1'b0;
+    tb_scl = 1'b1;
+    tb_starting_byte = 8'b11110000;
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    tb_sda_in = 1'b1;
+    @(posedge tb_clk);
+    @(negedge tb_clk);
+    @(posedge tb_clk);
+    assert(tb_rw_mode == 1'b0 && tb_address_match == 1'b1 
+          && tb_stop_found == 1'b1 && tb_start_found == 1'b0) 
+      $info("Test case PASSED");
+    else 
+      $error("Test case FAILED");
+    
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    
+    @(posedge tb_clk);
+    tb_sda_in = 1'b0;
+    tb_scl = 1'b1;
+    tb_starting_byte = 8'b00001111;
+    @(posedge tb_clk);
+    
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(negedge tb_clk);
+    assert( tb_start_found == 1'b1) 
+      $info("Test case start found PASSED");
+    else 
+      $error("Test case start found FAILED");
+    tb_sda_in = 1'b1;
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(negedge tb_clk);
+    
+    assert(tb_rw_mode == 1'b1 && tb_address_match == 1'b0 
+          && tb_stop_found == 1'b1 && tb_start_found == 1'b0) 
+      $info("Test case BLAH PASSED");
+    else 
+      $error("Test case BLAH FAILED");
+    
+    @(posedge tb_clk);
+    tb_scl = 0;
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    tb_scl = 1;
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    
+    for (tb_starting_byte = 8'b00000000; tb_starting_byte <= 8'b11110000; tb_starting_byte = tb_starting_byte + 1) 
+    begin
+      @(posedge tb_clk);
+      tb_n_rst = 1'b1;
+      tb_sda_in = 1'b0;
+      tb_scl = 1'b1; 
+      @(posedge tb_clk);
+      tb_sda_in = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      #1;
+      assert(tb_rw_mode == tb_starting_byte[0] && tb_address_match == (tb_starting_byte[7:1] == 7'b1111000)) 
+        $info("Test case PASSED");
+      else 
+        $error("Test case FAILED");  
+    end 
+    
+ 
+      
+    
+  end
+  
+endmodule

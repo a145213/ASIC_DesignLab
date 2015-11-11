@@ -1,0 +1,277 @@
+// $Id: $
+// File name:   tb_scl_edge.sv
+// Created:     10/7/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: SCL Edge Detector Test Bench
+
+`timescale 1ns / 10ps
+
+module tb_scl_edge ();
+  
+  parameter CLK_PERIOD = 10;
+  parameter NUM_TEST_CASES = 20;
+  
+  reg tb_clk;
+  reg tb_n_rst;
+  reg tb_scl;
+  reg rising;
+  reg falling;
+  
+  
+  scl_edge DUT(
+    .clk(tb_clk),
+    .n_rst(tb_n_rst),
+    .scl(tb_scl),
+    .rising_edge_found(rising),
+    .falling_edge_found(falling)
+  );
+  
+  //assign tb_scl = tb_test_i;
+  
+  always 
+  begin : CLK_GEN
+    tb_clk = 1'b0;
+    #(CLK_PERIOD / 2);
+    tb_clk = 1'b1;
+    #(CLK_PERIOD / 2);
+  end
+
+     
+  initial begin
+    // Initilize all inputs
+    tb_n_rst = 1'b1;  // Initially inactive
+    tb_scl = 1'b0;
+    // Get away from Time = 0
+    @(posedge tb_clk);
+    @(posedge tb_clk);
+    
+    //for(tb_test_case = 1; tb_test_case <= NUM_TEST_CASES; tb_test_case++)
+    //begin
+      tb_n_rst = 1'b0;  // Initially inactive
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      tb_n_rst = 1'b1;
+      tb_scl = 1'b0; 
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(negedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+      @(negedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+        assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(negedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+      
+      @(negedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+        assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+      
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(posedge tb_clk);
+       @(negedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      @(posedge tb_clk);
+      
+       tb_scl = 1'b0;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (falling == 1'b1)
+        $info("Test falling PASSED");
+      else
+        $error("Test falling FAILED");
+
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      tb_scl = 1'b1;
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      @(posedge tb_clk);
+      assert (rising == 1'b1)
+        $info("Test rising PASSED");
+      else
+        $error("Test rising FAILED");
+  end
+  
+endmodule
+

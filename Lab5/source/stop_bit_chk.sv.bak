@@ -1,0 +1,30 @@
+// $Id: $
+// File name:   stop_bit_chk.sv
+// Created:     9/27/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Stop Bit Checker
+
+module stop_bit_chk (
+  input wire clk,
+  input wire n_rst,
+  input wire sbc_clear,
+  input wire sbc_enable,
+  input wire stop_bit,
+  output wire framing_error
+);
+
+reg nxt_framing_error;
+
+always @ (posedge clk, negedge n_rst)
+begin
+  if(n_rst = 1'b0)
+    begin
+      framing_error <= 1'b0;
+    end
+  else
+    begin
+      framing_error <= nxt_framing_error;
+    end
+end

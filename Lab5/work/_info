@@ -1,0 +1,131 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg109/ece337/Lab5
+vflex_counter
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 Ih:[2z:gLa>DZn^:g2Kn`F2
+Z3 V]UHBMdi:701aXiNBF;o463
+S1
+Z4 d/home/ecegrid/a/mg109/ece337/Lab5
+Z5 w1411666394
+Z6 8source/flex_counter.sv
+Z7 Fsource/flex_counter.sv
+L0 9
+Z8 OL;L;10.1b;51
+r1
+31
+Z9 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+Z10 !s100 ao2HZg4oA6_QYf?SK[XA]2
+Z11 !s105 flex_counter_sv_unit
+Z12 !s108 1412031024.675046
+Z13 !s107 source/flex_counter.sv|
+Z14 !s90 -reportprogress|300|source/flex_counter.sv|
+!i10b 1
+!s85 0
+vflex_stp_sr
+R1
+Z15 IkJ9CI1KdQ>0jC3NG:?:Ez0
+Z16 VM;Q::J34zEjR^HV3Kn9SX3
+S1
+R4
+Z17 w1411845851
+Z18 8source/flex_stp_sr.sv
+Z19 Fsource/flex_stp_sr.sv
+L0 9
+R8
+r1
+31
+R9
+Z20 !s100 e8[0YI5A2zQT2eJ@hI<WJ3
+Z21 !s105 flex_stp_sr_sv_unit
+Z22 !s108 1412031019.144290
+Z23 !s107 source/flex_stp_sr.sv|
+Z24 !s90 -reportprogress|300|source/flex_stp_sr.sv|
+!i10b 1
+!s85 0
+vrcu
+R1
+!i10b 1
+!s100 <FS3KCaO;8@edKgjI_dng0
+I?bMM6n3^L6LRnN1jZZRTi2
+Z25 VY[fE37nKSVLQhQ5akMC@b0
+Z26 !s105 rcu_sv_unit
+S1
+R4
+w1412033993
+Z27 8source/rcu.sv
+Z28 Fsource/rcu.sv
+L0 9
+R8
+r1
+!s85 0
+31
+!s108 1412033999.760842
+!s107 source/rcu.sv|
+Z29 !s90 -reportprogress|300|source/rcu.sv|
+R9
+vrcv_block
+R1
+Z30 !s100 c@ZE:7COhcI=:=B1Fe]K]0
+Z31 IW@;h4n1C<3l[cJ01;=R]81
+Z32 VTKKQhEoKSGn@M>X3]FgbL1
+Z33 !s105 rcv_block_sv_unit
+S1
+R4
+Z34 w1411927808
+Z35 8source/rcv_block.sv
+Z36 Fsource/rcv_block.sv
+L0 9
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|source/rcv_block.sv|
+R9
+Z38 !s108 1412030977.817644
+Z39 !s107 source/rcv_block.sv|
+!i10b 1
+!s85 0
+vsr_9bit
+R1
+Z40 !s100 HVgjdYm]k@2WS?EMLlA`=0
+Z41 IzNN[5eaf7_?<D?<[d7G<T0
+Z42 VzL0DSSzGn7hWk:i@TQ`ec1
+Z43 !s105 sr_9bit_sv_unit
+S1
+R4
+Z44 w1411845958
+Z45 8source/sr_9bit.sv
+Z46 Fsource/sr_9bit.sv
+L0 9
+R8
+r1
+31
+Z47 !s90 -reportprogress|300|source/sr_9bit.sv|
+R9
+Z48 !s108 1412030986.771804
+Z49 !s107 source/sr_9bit.sv|
+!i10b 1
+!s85 0
+vtimer
+R1
+Z50 Izdh3eM];llUB6`C@Yec3h2
+Z51 VkUG6Yd@=FAX?Va95zaL]z0
+Z52 !s105 timer_sv_unit
+S1
+R4
+Z53 w1412031173
+Z54 8source/timer.sv
+Z55 Fsource/timer.sv
+L0 9
+R8
+r1
+31
+Z56 !s90 -reportprogress|300|source/timer.sv|
+R9
+!i10b 1
+Z57 !s100 TZ[f]ZNH2=llR^UQl`2eJ3
+!s85 0
+Z58 !s108 1412031192.905509
+Z59 !s107 source/timer.sv|

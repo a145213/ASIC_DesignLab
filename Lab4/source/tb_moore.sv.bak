@@ -1,0 +1,73 @@
+// $Id: $
+// File name:   tb_moore.sv
+// Created:     9/18/2014
+// Author:      Allen Chien, Cody Allen
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Moore Machine 1101 Detector Test Bench
+
+`timescale 1ns / 10ps
+
+module tb_moore();
+  
+  // Define local parameters used by the test bench
+	localparam	CLK_PERIOD		= 2.5;
+	localparam	CHECK_DELAY 	= 1;
+	
+	// Declare DUT portmap signals
+	reg tb_clk;
+	reg tb_n_rst;
+	reg tb_i = 0;
+	reg tb_o;
+	
+	reg tb_expected_output = 0;
+	reg [15:0] tb_test_cases;
+	reg [3:0] tb_temp;
+	reg [3:0] tb_count;
+  reg [3:0] check_array = {1'b0, 1'b0, 1'b0, 1'b0};
+  integer test_out_total = 0;
+	
+	//assign tb_i = tb_test_inputs[NUM_TEST_BIT - 1: 0];
+	
+	// Generate clock signal
+	always begin
+	  tb_clk = 1'b0;
+	  #(CLK_PERIOD / 2.0);
+	  tb_clk = 1'b1;
+	  #(CLK_PERIOD / 2.0);
+	end
+	
+		// DUT portmap
+	moore DUT(.clk(tb_clk), .n_rst(tb_n_rst), .i(tb_i), .o(tb_o));
+	
+	initial
+	begin    
+	  tb_i = 0;
+	  tb_n_rst = 1'b0;
+    tb_count = 0;
+    #(1)
+    tb_test_cases = 1'b1;
+    
+    #(0.1);
+    
+    for(tb_count = 0; tb_count < 100; tb_count = tb_count + 1) begin
+      tb_temp = $urandom_range(1,0);
+      @(negedge tb_clk)
+      tb_i <= tb_temp;
+      check_array[3:0] = {check_array[2:0], tb_temp};
+      tb_temp = (check_array[3:0] == {1'b1,1'b1,1'b0,1'b1}? (tb_temp + 1) : tb_temp);
+    end
+    # 10
+    @(negedge tb_clk);
+		if (test_out_total == tb_temp)
+			$info("Test Bench PASSED");
+		else // Test case failed
+			$error("Test Bench FAILED");
+  end
+  
+  always @ (tb_o) begin
+    test_out_total = (tb_o == 1 ? (test_out_total + 1) : test_out_total);
+  end
+endmodule		  
+		  
+

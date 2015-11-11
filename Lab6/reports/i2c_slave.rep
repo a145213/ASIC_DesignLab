@@ -1,0 +1,149 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : i2c_slave
+Version: G-2012.06
+Date   : Wed Oct 22 18:34:53 2014
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: CONTROLLER/cur_state_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: FIFO/_FIFO/URFC/empty_flag_r_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CONTROLLER/cur_state_reg[0]/CLK (DFFSR)                 0.00       0.00 r
+  CONTROLLER/cur_state_reg[0]/Q (DFFSR)                   0.52       0.52 r
+  CONTROLLER/U98/Y (NOR2X1)                               0.15       0.67 f
+  CONTROLLER/U99/Y (NAND3X1)                              0.18       0.86 r
+  CONTROLLER/U100/Y (NOR2X1)                              0.17       1.03 f
+  CONTROLLER/read_enable (controller)                     0.00       1.03 f
+  FIFO/read_enable (tx_fifo)                              0.00       1.03 f
+  FIFO/_FIFO/r_enable (fifo)                              0.00       1.03 f
+  FIFO/_FIFO/URFC/renable (read_fifo_ctrl)                0.00       1.03 f
+  FIFO/_FIFO/URFC/U24/Y (NAND2X1)                         0.13       1.16 r
+  FIFO/_FIFO/URFC/U4/Y (INVX2)                            0.14       1.30 f
+  FIFO/_FIFO/URFC/RPU1/renable (read_ptr)                 0.00       1.30 f
+  FIFO/_FIFO/URFC/RPU1/U12/Y (BUFX2)                      0.21       1.51 f
+  FIFO/_FIFO/URFC/RPU1/U43/Y (NAND2X1)                    0.10       1.61 r
+  FIFO/_FIFO/URFC/RPU1/U44/Y (OAI21X1)                    0.10       1.71 f
+  FIFO/_FIFO/URFC/RPU1/U45/Y (INVX2)                      0.13       1.84 r
+  FIFO/_FIFO/URFC/RPU1/rptr_nxt[0] (read_ptr)             0.00       1.84 r
+  FIFO/_FIFO/URFC/U27/Y (XNOR2X1)                         0.16       2.00 r
+  FIFO/_FIFO/URFC/U28/Y (NAND2X1)                         0.07       2.08 f
+  FIFO/_FIFO/URFC/U29/Y (NOR2X1)                          0.08       2.15 r
+  FIFO/_FIFO/URFC/empty_flag_r_reg/D (DFFSR)              0.00       2.15 r
+  data arrival time                                                  2.15
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  FIFO/_FIFO/URFC/empty_flag_r_reg/CLK (DFFSR)            0.00       2.00 r
+  library setup time                                     -0.21       1.79
+  data required time                                                 1.79
+  --------------------------------------------------------------------------
+  data required time                                                 1.79
+  data arrival time                                                 -2.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.37
+
+
+1
+ 
+****************************************
+Report : area
+Design : i2c_slave
+Version: G-2012.06
+Date   : Wed Oct 22 18:34:53 2014
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                           16
+Number of nets:                            49
+Number of cells:                            8
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       8
+
+Combinational area:       195057.000000
+Noncombinational area:    178128.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          373185.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : i2c_slave
+Version: G-2012.06
+Date   : Wed Oct 22 18:34:53 2014
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+i2c_slave                                 8.899  142.597  110.718  151.497 100.0
+  DECODER (decode)                        0.272    7.215    3.874    7.487   4.9
+  EDGE_DETECT (scl_edge)                  0.164    3.606    1.811    3.771   2.5
+  TX (tx_sr)                           2.69e-03    8.300    6.893    8.303   5.5
+    IX (flex_pts_sr_NUM_BITS8_SHIFT_MSB1)
+                                       2.69e-03    8.300    6.776    8.303   5.5
+  RX (rx_sr)                           3.17e-02    9.152    5.908    9.184   6.1
+    IX (flex_stp_sr_NUM_BITS8_SHIFT_MSB1)
+                                       7.64e-03    8.312    5.548    8.319   5.5
+  SDA (sda_sel)                           0.000    0.000    0.110 1.10e-07   0.0
+  TIMER (timer)                           0.410    8.645   12.315    9.055   6.0
+    CLK_CNT (flex_counter_NUM_CNT_BITS4)
+                                          0.156    5.261    7.530    5.417   3.6
+  CONTROLLER (controller)                 0.270    4.389    8.348    4.659   3.1
+  FIFO (tx_fifo)                          7.748  101.289   71.459  109.038  72.0
+    _FIFO (fifo)                          7.748  101.289   71.459  109.038  72.0
+      URFC (read_fifo_ctrl)               0.206   21.576   15.324   21.782  14.4
+        RPU1 (read_ptr)                   0.000    8.189    7.596    8.189   5.4
+      UWFC (write_fifo_ctrl)              1.748   23.497   15.222   25.245  16.7
+        WPU1 (write_ptr)                  1.374   10.390    7.169   11.764   7.8
+      UFIFORAM (fiforam)                  5.794   56.217   40.913   62.011  40.9
+1

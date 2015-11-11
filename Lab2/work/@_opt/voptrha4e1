@@ -1,0 +1,33 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg109/ece337/Lab2
+T_opt
+VNRR8KQ1daAhmDNT4h1zlP0
+04 8 4 work sensor_s fast 0
+=1-000000000000-5408bef2-98b0a-525d
+o-quiet -auto_acc_if_foreign -work work -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Class0.5u/ECE337_IP/vsim
+n@_opt
+OL;O;10.1b;51
+vsensor_s
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IZi5Z`G:@zUO5h<=;36TOK3
+VAi;323keO>]GUoff9BcLl2
+!s105 sensor_s_sv_unit
+S1
+Z1 d/home/ecegrid/a/mg109/ece337/Lab2
+w1409859259
+8source/sensor_s.sv
+Fsource/sensor_s.sv
+L0 9
+Z2 OL;L;10.1b;51
+r1
+31
+!s90 -reportprogress|300|source/sensor_s.sv|
+tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+!i10b 1
+!s100 C9NZZmYKc8O8dk]jALGWa2
+!s85 0
+!s108 1409859261.138165
+!s107 source/sensor_s.sv|

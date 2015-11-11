@@ -1,0 +1,128 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rcv_block
+Version: G-2012.06
+Date   : Mon Sep 29 21:32:58 2014
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: TIMER/CLK_CNT/count_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: TIMER/CLK_CNT/count_out_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  TIMER/CLK_CNT/count_out_reg[0]/CLK (DFFSR)              0.00       0.00 r
+  TIMER/CLK_CNT/count_out_reg[0]/Q (DFFSR)                0.53       0.53 f
+  TIMER/CLK_CNT/U20/Y (BUFX2)                             0.39       0.92 f
+  TIMER/CLK_CNT/U45/Y (NAND3X1)                           0.25       1.17 r
+  TIMER/CLK_CNT/U46/Y (NOR2X1)                            0.25       1.41 f
+  TIMER/CLK_CNT/U47/Y (XOR2X1)                            0.23       1.64 f
+  TIMER/CLK_CNT/U48/Y (OAI22X1)                           0.13       1.77 r
+  TIMER/CLK_CNT/count_out_reg[3]/D (DFFSR)                0.00       1.77 r
+  data arrival time                                                  1.77
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  TIMER/CLK_CNT/count_out_reg[3]/CLK (DFFSR)              0.00       2.00 r
+  library setup time                                     -0.23       1.77
+  data required time                                                 1.77
+  --------------------------------------------------------------------------
+  data required time                                                 1.77
+  data arrival time                                                 -1.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+ 
+****************************************
+Report : area
+Design : rcv_block
+Version: G-2012.06
+Date   : Mon Sep 29 21:32:58 2014
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                           21
+Number of nets:                            35
+Number of cells:                            6
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       6
+
+Combinational area:       50265.000000
+Noncombinational area:    57024.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          107289.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : rcv_block
+Version: G-2012.06
+Date   : Mon Sep 29 21:32:59 2014
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+rcv_block                                 2.968   41.351   33.667   44.319 100.0
+  STOP_BIT (stop_bit_chk)              2.58e-03    1.027    0.737    1.030   2.3
+  START_BIT (start_bit_det)            7.70e-02    3.591    1.681    3.668   8.3
+  RX_DATA_BUFFER (rx_data_buff)        2.00e-03   10.348    6.658   10.350  23.4
+  SHIFT_REG (sr_9bit)                     0.140    9.409    6.005    9.549  21.5
+    IX (flex_stp_sr_NUM_BITS9_SHIFT_MSB0)
+                                          0.140    9.409    6.005    9.549  21.5
+  RCU (rcu)                               0.325    3.417    3.868    3.743   8.4
+  TIMER (timer)                           2.421   13.559   14.720   15.980  36.1
+    BIT_CNT (flex_counter_NUM_CNT_BITS4_0)
+                                          0.169    5.305    7.276    5.474  12.4
+    CLK_CNT (flex_counter_NUM_CNT_BITS4_1)
+                                          2.253    8.254    7.444   10.506  23.7
+1

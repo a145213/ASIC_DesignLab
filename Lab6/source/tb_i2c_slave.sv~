@@ -1,0 +1,532 @@
+// $Id: $
+// File name:   tb_i2c_slave.sv
+// Created:     3/16/2014
+// Author:      Yuchen Cui
+// Lab Section: 337-02
+// Version:     1.0  Initial Design Entry
+// Description: test bench for i2c slave
+`timescale 1ns/10ps
+
+module tb_i2c_slave ();
+  
+  localparam CLK_PERIOD = 300;
+    
+  reg clk,n_rst;
+  reg tb_scl_out;
+  reg tb_scl_in;
+  reg tb_sda_in;
+  reg tb_sda_out;
+  reg slave_scl_in;
+  reg slave_sda_in;
+  reg slave_sda_out;
+  //reg [1:0] sda_write,sda_read,scl_write,scl_read;
+  reg [7:0] tb_sda_signal,ct;
+  
+  reg tb_write_enable;
+  reg [7:0] tb_write_data;
+  reg tb_fifo_empty;
+  reg tb_fifo_full;
+  
+  reg [7:0] tb_tx_out;
+  
+  always
+  begin
+    clk = 1'b0;
+    #(CLK_PERIOD/2);
+    clk = 1'b1;
+    #(CLK_PERIOD/2);
+  end
+  
+  i2c_bus TESTBENCH (
+     .scl_read({slave_scl_in,tb_scl_in}),
+     .scl_write({1'bx,tb_scl_out}),
+     .sda_read({slave_sda_in,tb_sda_in}),
+     .sda_write({slave_sda_out,tb_sda_out})
+  );
+  
+  i2c_slave DUT (
+  .clk(clk),
+  .n_rst(n_rst),
+  .scl(slave_scl_in),
+  .sda_in(slave_sda_in),
+  .sda_out(slave_sda_out),
+  .write_enable(tb_write_enable),
+  .write_data(tb_write_data),
+  .fifo_empty(tb_fifo_empty),
+  .fifo_full(tb_fifo_full)
+  );
+  
+  initial
+  begin
+    #5;
+    n_rst = 1'b0;
+    tb_write_data = 8'b00000000;
+    tb_write_enable = 1'b0;
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b1;
+    tb_sda_signal = 8'b00000000;
+    tb_tx_out = 8'b00000000;
+    
+    @(posedge clk);
+    @(posedge clk);
+    assert(slave_sda_out == 1'b1) $info("Reset PASSED!");
+    @(posedge clk);
+    n_rst = 1'b1;
+    @(posedge clk);
+    for(tb_write_data = 8'b00000111; tb_write_data <= 8'b00111111; tb_write_data = tb_write_data + 8'b00001000) 
+    begin
+      @(posedge clk);
+      tb_write_enable = 1'b1;
+    end
+    @(posedge clk);
+    tb_write_enable = 1'b0;
+      
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+  
+    // generate Start bit
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    //send DUT address out
+    tb_sda_signal = 8'b11110001;
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      tb_sda_out = tb_sda_signal[7];
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      //$info("tb_sda_out: %d ,tb_sda_signal: %b",tb_sda_out, tb_sda_signal);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_sda_signal = {tb_sda_signal[6:0],1'b0};
+      @(posedge clk);
+    end
+    
+    //check device ack
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    if(tb_sda_in == 1'b0) $info("Address match ACKed!");
+    else $error("Failed to match address! tb_sda_in:%d  slave_sda_out: %d",tb_sda_in, slave_sda_out);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //receive 8-bit data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+     @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    
+    
+    
+    //received data
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+     @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    
+    
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+     @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master NACK
+    @(posedge clk);
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    
+    // generate Start bit
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    
+    
+      //send DUT address out
+    tb_sda_signal = 8'b11110001;
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      tb_sda_out = tb_sda_signal[7];
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+     // $info("tb_sda_out: %d ,tb_sda_signal: %b",tb_sda_out, tb_sda_signal);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_sda_signal = {tb_sda_signal[6:0],1'b0};
+      @(posedge clk);
+    end
+    
+    //check device ack
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    if(tb_sda_in == 1'b0) $info("Address match ACKed!");
+    else $error("Failed to match address! tb_sda_in:%d  slave_sda_out: %d",tb_sda_in, slave_sda_out);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //receive 8-bit data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    
+   
+    //receive data from DUT
+    for(ct = 0; ct < 8; ct = ct + 1)
+    begin
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b1;
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      @(posedge clk);
+      tb_scl_out = 1'b0;
+      @(posedge clk);
+      tb_tx_out = {tb_tx_out[6:0],slave_sda_out};
+      @(posedge clk);
+    end
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    
+    //master ACK
+    @(posedge clk);
+    @(posedge clk);
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+     @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+
+    
+  //generate Stop bit
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b1;
+    tb_sda_out = 1'b1;
+    @(posedge clk);
+    @(posedge clk);
+    tb_scl_out = 1'b0;
+    @(posedge clk);
+    @(posedge clk);
+    
+  end// initial
+endmodule

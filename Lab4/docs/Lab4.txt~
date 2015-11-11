@@ -1,0 +1,59 @@
+Postlab
+
+11.1
+1. What is the minimum amount of time that data_ready must remain asserted to ensure correct operation? What is the minimum amount of time, in clock cycles, that data must remain valid after data_ready is asserted in order to ensure correct operation? (You may assume that all setup and hold times, as well as any propagation delays, are negligible.)
+
+The data_ready must remain asserted for at least two clock cycles. The data_ready has to be asserted after it entered the sort state.
+
+2. Assume that the datapath was extended to support a multiplication instruction defined by dest = src1 * src2. Write the pseudocode for a state machine that would calculate the dot product of the last four samples. (Remember the dot product is (sample1*sample3) + (sample2*sample4). Also assume that the division code has been removed from the top level.
+
+﻿idle:	if (data_ready=0) goto idle 	//wait until data_ready = 1
+store:  if (data_ready=0) goto eidle
+        reg[7] = data			//store data in a register
+        err = 0				//reset error
+
+sort1:  reg[3] = reg[4]			//reorder registers
+sort2:  reg[4] = reg[5]			//reorder registers
+
+
+sort3:  reg[5] = reg[6]			//reorder registers
+sort4:  reg[6] = reg[7]			//reorder registers
+
+mul1:  reg[1] = reg[3] * reg[5]		//add data, store result
+        if (V) goto eidle  
+mul2:  reg[2] = reg[4] * reg[6]
+        if (V) goto eidle
+add1:  reg[0] = reg[1] + reg[2]
+        if (V) goto eidle
+        goto idle
+
+eidle: err = 1
+       if (data_ready=1) goto store	//wait until data_ready=1
+       if (data_ready=0) goto eidle
+
+11.2
+1. How are the image files different? Does this make sense given the filter design built
+in the lab? Why or why not?
+
+The filtered image looks a little bit more blurry compare to the original image. It looks less sharp. It does make sense since we are averging it by four.
+
+2. What is the general syntax for each of the file IO functions used in the provided test bench (tb_avg_four_image.sv)?
+
+$fopen(INPUT_FILENAME, "rb");
+$fclose(in_file);
+$ftell(in_file)
+$fwrite(res_file, "%c", res_bmp_file_header[i]);
+$fseek(res_file, res_image_data_ptr, `SEEK_START);
+$fscanf(in_file, "%c", in_pixel_val[0]);
+
+3. What are the different format specifies available for use in file functions like $fscanf(...)?
+
+b - Binary values
+d - Decimal values
+o - Octal values
+h or x - Hexadecimal values
+c - A single character
+f - A floating point number
+s - A string
+% - The percent character
+

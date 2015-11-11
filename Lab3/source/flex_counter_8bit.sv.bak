@@ -1,0 +1,25 @@
+// $Id: $
+// File name:   flex_counter_8bit.sv
+// Created:     9/13/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Flexible Counter Wrapper File
+
+module flex_counter_8bit
+(
+  input wire clk,
+  input wire n_rst,
+  input wire clear,
+  input wire count_enable,
+  input reg [7:0] rollover_val,
+  output reg [7:0] count_out,
+  output reg rollover_flag
+);
+
+	// STUDENT: Fill in the correct port map with parameter override syntax for using your n-bit 
+	// ripple carry adder design to be an 8-bit ripple carry adder design
+	
+	flex_counter #(8) IX (a, b, carry_in, sum, overflow);
+	
+endmodule

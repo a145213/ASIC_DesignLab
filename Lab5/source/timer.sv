@@ -1,0 +1,45 @@
+// $Id: $
+// File name:   timer.sv
+// Created:     9/27/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Timing Controller
+
+module timer (
+  input wire clk,
+  input wire n_rst,
+  input wire enable_timer,
+  output wire shift_strobe,
+  output wire packet_done
+);
+
+
+reg [3:0] count_out1;
+reg [3:0] count_out2;
+reg clk_rollover_flag;
+reg bit_rollover_flag;
+
+assign shift_strobe = clk_rollover_flag;
+assign packet_done = bit_rollover_flag;
+
+flex_counter #(4) CLK_CNT (.clk(clk), 
+	                    .n_rst(n_rst), 
+	                    .clear(bit_rollover_flag), 
+	                    .count_enable(enable_timer), 
+	                    .rollover_val(4'b1010), 
+	                    .count_out(count_out1), 
+	                    .rollover_flag(clk_rollover_flag)
+	                    );
+	
+
+flex_counter #(4) BIT_CNT (.clk(clk), 
+	                    .n_rst(n_rst), 
+	                    .clear(bit_rollover_flag), 
+	                    .count_enable(clk_rollover_flag), 
+	                    .rollover_val(4'b1001), 
+	                    .count_out(count_out2), 
+	                    .rollover_flag(bit_rollover_flag)
+	                    );
+
+endmodule

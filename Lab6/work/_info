@@ -1,0 +1,257 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg109/ece337/Lab6
+vcontroller
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 aQF[9A<BW9TPF03[D[NgO3
+IE9VW`PGg0j>N:eZ`Qhk5Y2
+Z2 VhEaof8^<n:<iEzCS1LeR_1
+Z3 !s105 controller_sv_unit
+S1
+Z4 d/home/ecegrid/a/mg109/ece337/Lab6
+w1414017266
+Z5 8source/controller.sv
+Z6 Fsource/controller.sv
+L0 9
+Z7 OL;L;10.1b;51
+r1
+!s85 0
+31
+!s108 1414017275.226777
+!s107 source/controller.sv|
+Z8 !s90 -reportprogress|300|source/controller.sv|
+Z9 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+vdecode
+R1
+Z10 I3;ReKfdT=4MXl^XP06^Gh0
+Z11 VD99IW:azBGLOR`bJ^96MI1
+Z12 !s105 decode_sv_unit
+S1
+R4
+Z13 w1412798182
+Z14 8source/decode.sv
+Z15 Fsource/decode.sv
+L0 10
+R7
+r1
+31
+Z16 !s90 -reportprogress|300|source/decode.sv|
+R9
+Z17 !s100 z1=nEzz7V;On:]8ZkT@fg1
+Z18 !s108 1412798185.635783
+Z19 !s107 source/decode.sv|
+!i10b 1
+!s85 0
+vrx_sr
+R1
+Z20 I`ezWAiB?2?9aMXh?:S1FR1
+Z21 VnjdSNle8Y>YKNHCjh1m`n3
+Z22 !s105 rx_sr_sv_unit
+S1
+R4
+Z23 w1413762931
+Z24 8source/rx_sr.sv
+Z25 Fsource/rx_sr.sv
+L0 9
+R7
+r1
+31
+Z26 !s90 -reportprogress|300|source/rx_sr.sv|
+R9
+Z27 !s100 jbML:XP[BU>BfkXcH86BE2
+Z28 !s108 1413762938.538592
+Z29 !s107 source/rx_sr.sv|
+!i10b 1
+!s85 0
+vscl_edge
+R1
+Z30 Iomo=::z3?:HKKO^6eKMYU2
+Z31 VULO=miRAeL4=bVNGNGXW10
+Z32 !s105 scl_edge_sv_unit
+S1
+R4
+Z33 w1412802003
+Z34 8source/scl_edge.sv
+Z35 Fsource/scl_edge.sv
+L0 9
+R7
+r1
+31
+Z36 !s90 -reportprogress|300|source/scl_edge.sv|
+R9
+Z37 !s100 cX?QbZ1^KBj?khPoWZcL^0
+Z38 !s108 1412802011.751045
+Z39 !s107 source/scl_edge.sv|
+!i10b 1
+!s85 0
+vsda_sel
+R1
+Z40 !s100 5jD^QdMzDiNe?Uo8f<l7P3
+Z41 I7ddb:`dM_[RQj[SoV:Q661
+Z42 V8Xh9?Lk81HO0e9SUTN<ZJ2
+Z43 !s105 sda_sel_sv_unit
+S1
+R4
+Z44 w1412648519
+Z45 8source/sda_sel.sv
+Z46 Fsource/sda_sel.sv
+L0 9
+R7
+r1
+31
+Z47 !s90 -reportprogress|300|source/sda_sel.sv|
+R9
+Z48 !s108 1412716280.724845
+Z49 !s107 source/sda_sel.sv|
+!i10b 1
+!s85 0
+vtb_decode
+R1
+Z50 I]So@Cd8G_1JV?0fATkEzM3
+Z51 Vi?hCNY:4DW@UU7P7IJBl12
+Z52 !s105 tb_decode_sv_unit
+S1
+R4
+Z53 w1412798130
+Z54 8source/tb_decode.sv
+Z55 Fsource/tb_decode.sv
+L0 11
+R7
+r1
+31
+Z56 !s90 -reportprogress|300|source/tb_decode.sv|
+R9
+Z57 !s100 84Y<6UNeQjSa1NnzBLcQD1
+Z58 !s108 1412798162.335121
+Z59 !s107 source/tb_decode.sv|
+!i10b 1
+!s85 0
+vtb_scl_edge
+R1
+Z60 IlD]5P2P87PYoJbQ<=:gLI2
+Z61 V7<Lg1_=KNnJi3zMc>LiU=0
+Z62 !s105 tb_scl_edge_sv_unit
+S1
+R4
+Z63 w1412799744
+Z64 8source/tb_scl_edge.sv
+Z65 Fsource/tb_scl_edge.sv
+L0 11
+R7
+r1
+31
+Z66 !s90 -reportprogress|300|source/tb_scl_edge.sv|
+R9
+Z67 !s100 8XmBRL4z<K<_fUX7jECVi2
+Z68 !s108 1412799746.482789
+Z69 !s107 source/tb_scl_edge.sv|
+!i10b 1
+!s85 0
+vtb_sda_sel
+R1
+Z70 IA@G9VF^VYF7`lG:YNiCA30
+Z71 Vh0Xk6``X@<lz^c^ZcJh7?1
+Z72 !s105 tb_sda_sel_sv_unit
+S1
+R4
+Z73 w1412723319
+Z74 8source/tb_sda_sel.sv
+Z75 Fsource/tb_sda_sel.sv
+L0 11
+R7
+r1
+31
+Z76 !s90 -reportprogress|300|source/tb_sda_sel.sv|
+R9
+Z77 !s100 i]J5E6mj9F6b0SPW9CVf<2
+Z78 !s108 1412723327.237751
+Z79 !s107 source/tb_sda_sel.sv|
+!i10b 1
+!s85 0
+vtb_tx_fifo
+R1
+Z80 IESP@O8[[^nRY;[:P^aIzL3
+Z81 VCnKn0nXJGn6IXdY4oiC@I3
+Z82 !s105 tb_tx_fifo_sv_unit
+S1
+R4
+Z83 w1412794272
+Z84 8source/tb_tx_fifo.sv
+Z85 Fsource/tb_tx_fifo.sv
+L0 11
+R7
+r1
+31
+Z86 !s90 -reportprogress|300|source/tb_tx_fifo.sv|
+R9
+Z87 !s100 j8BN00_;f?`;B;3B;;Dd<1
+Z88 !s108 1412794273.346943
+Z89 !s107 source/tb_tx_fifo.sv|
+!i10b 1
+!s85 0
+vtimer
+R1
+Z90 IGUe=eLaBFfAWE;dENNfQ22
+Z91 VA[MYNCAC?f5ncSe`j:EPj2
+Z92 !s105 timer_sv_unit
+S1
+R4
+Z93 w1413930932
+Z94 8source/timer.sv
+Z95 Fsource/timer.sv
+L0 9
+R7
+r1
+31
+Z96 !s90 -reportprogress|300|source/timer.sv|
+R9
+Z97 !s100 UQ4;AYd^E2Qn1ofShkHCJ1
+Z98 !s108 1413930933.728881
+Z99 !s107 source/timer.sv|
+!i10b 1
+!s85 0
+vtx_fifo
+R1
+Z100 IlHO[7lYE:zbRTf9JADob?3
+Z101 VR33:`_ST<E6i1=]BZ<5oe1
+S1
+R4
+Z102 w1412716296
+Z103 8source/tx_fifo.sv
+Z104 Fsource/tx_fifo.sv
+L0 9
+R7
+r1
+31
+R9
+Z105 !s100 ITbVW0abRMYGMmIo>lMCi2
+Z106 !s105 tx_fifo_sv_unit
+Z107 !s108 1412716297.494438
+Z108 !s107 source/tx_fifo.sv|
+Z109 !s90 -reportprogress|300|source/tx_fifo.sv|
+!i10b 1
+!s85 0
+vtx_sr
+R1
+Z110 !s100 DSaKjl5QZFU<85@zCHOFc1
+Z111 IP=IfDh:dAiIFJ_eeB8S?D1
+Z112 V:;jhGfknNPBEK@]PDYzgG2
+Z113 !s105 tx_sr_sv_unit
+S1
+R4
+Z114 w1413762928
+Z115 8source/tx_sr.sv
+Z116 Fsource/tx_sr.sv
+L0 9
+R7
+r1
+31
+Z117 !s90 -reportprogress|300|source/tx_sr.sv|
+R9
+Z118 !s108 1413762941.833429
+Z119 !s107 source/tx_sr.sv|
+!i10b 1
+!s85 0

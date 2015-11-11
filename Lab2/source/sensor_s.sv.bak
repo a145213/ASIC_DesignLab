@@ -1,0 +1,24 @@
+// $Id: $
+// File name:   sensor_s.sv
+// Created:     9/4/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Structural Style Sensor Error Detector Specifications
+
+module sensor_s
+(
+  input wire [3:0] sensors,
+  output wire error
+);
+
+wire out1;
+wire out2;
+
+and A1 (out1, sensors[1], sensors[2]);
+and A2 (out2, sensors[0], sensors[2]);
+or A3 (error, sensors[3], out1, out2);
+
+
+
+endmodule

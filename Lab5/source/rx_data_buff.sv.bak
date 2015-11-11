@@ -1,0 +1,41 @@
+// $Id: $
+// File name:   rx_data_buff.sv
+// Created:     9/27/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: RX Data Buffer
+
+module rx_data_buff (
+  input wire clk,
+  input wire n_rst,
+  input wire load_buffer,
+  input wire [7:0] packet_data,
+  input wire data_read,
+  output wire [7:0] rx_data,
+  output wire data_ready,
+  output wire overrun_error
+);
+
+reg nxt_overrun_error;
+reg nxt_data_ready;
+reg [7:0] nxt_rx_data;
+
+always @ (posedge clk, negedge n_rst)
+begin
+  if (n_rst == 1'b0)
+    begin
+      rx_data <= '1;
+      data_ready <= 1'b0;
+      overrun_error <= 1'b0;
+    end
+  else
+    begin
+      rx_data <= nxt_rx_data;
+      data_ready <= nxt_data_ready;
+      overrun_error <= nxt_overrun_data;
+    end
+end
+
+
+

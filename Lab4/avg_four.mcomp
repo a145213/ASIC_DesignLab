@@ -1,0 +1,20 @@
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module controller
+-- Compiling module sync
+-- Compiling module datapath_ctrl
+-- Compiling module regfile_NUM_REG_ADDR_BITS4_REG_SIZE_BITS16
+-- Compiling module scalable_cla_block_CLA_BLK_SIZE_BITS4_3
+-- Compiling module scalable_cla_block_CLA_BLK_SIZE_BITS4_2
+-- Compiling module scalable_cla_block_CLA_BLK_SIZE_BITS4_1
+-- Compiling module scalable_cla_block_CLA_BLK_SIZE_BITS4_0
+-- Compiling module scalable_cla_addr_NUM_CLA_BLKS4_CLA_BLK_SIZE_BITS4
+-- Compiling module alu_DATA_SIZE_BITS16
+-- Compiling module datapath
+-- Compiling module flex_counter_NUM_CNT_BITS16_DW01_inc_2
+-- Compiling module flex_counter_NUM_CNT_BITS16_DW01_inc_3
+-- Compiling module flex_counter_NUM_CNT_BITS16
+-- Compiling module counter
+-- Compiling module avg_four
+
+Top level modules:
+	avg_four

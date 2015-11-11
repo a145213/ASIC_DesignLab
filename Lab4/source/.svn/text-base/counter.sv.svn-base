@@ -1,0 +1,28 @@
+// $Id: $
+// File name:   counter.sv
+// Created:     9/23/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Wrapper file for flex_counter.sv
+
+module counter
+(
+  input wire clk,
+  input wire n_reset,
+  input wire cnt_up,
+  output wire one_k_samples
+);
+
+reg [15:0] count_out;
+reg clear = 0;
+reg [15:0] rollover_val = 1000;
+
+	// STUDENT: Fill in the correct port map with parameter override syntax for using your n-bit 
+	// ripple carry adder design to be an 8-bit ripple carry adder design
+	
+	flex_counter #(16) IX (.clk(clk), .n_rst(n_reset), .clear(clear), .count_enable(cnt_up), 
+	                       .rollover_val(rollover_val), .count_out(count_out), 
+	                       .rollover_flag(one_k_samples));
+	
+endmodule

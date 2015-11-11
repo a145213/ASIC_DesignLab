@@ -1,0 +1,39 @@
+// $Id: $
+// File name:   rx_sr.sv
+// Created:     10/9/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Receiving Shift Register
+
+module rx_sr (
+  input wire clk,
+  input wire n_rst,
+  input wire sda_in,
+  input wire rising_edge_found,
+  input wire rx_enable,
+  output wire [7:0] rx_data
+);
+
+reg shift_clk;
+wire serial_clk;
+  
+assign serial_clk = shift_clk;
+  
+always_ff @ (posedge clk)
+begin  
+  if (rising_edge_found == 1)
+    shift_clk <= 1'b1;
+  else
+    shift_clk <= 1'b0;
+end
+  
+flex_stp_sr #(8, 1) IX (
+  .clk(clk),
+  .n_rst(n_rst),
+  .shift_enable(rx_enable && shift_clk),
+  .serial_in(sda_in),
+  .parallel_out(rx_data)
+);
+  
+endmodule

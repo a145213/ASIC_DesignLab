@@ -1,0 +1,28 @@
+Timer
+
+flexcounter edge_count (NUM_BITS = 1, rollover_val = 8)
+
+IDLE: 	byte_received = 0
+	ack_prep = 0
+	check_ack = 0
+	ack_done = 0
+
+	if (start_found) goto WAIT
+
+WAIT:	if (rising_edge_found) 
+		goto COUNT
+
+COUNT:	edge_count_enable = 1
+	if (rollover_flag == 1 & byte_received = 1
+		goto ACK_PREP
+	else goto WAIT
+
+ACK_PREP: ack_prep = 1
+		if (rising_edge_found) goto CHECK_ACK
+
+CHECK_ACK: check_ack = 1
+		if (falling_edge_found) goto ack_done
+
+ACK_DONE: ack_done = 1
+		if (stop_found) goto IDLE
+		if (start_found) goto WAIT

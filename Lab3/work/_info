@@ -1,0 +1,236 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg109/ece337/Lab3
+vadder_16bit
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 IEL^?]?SKS5546_HjFaL<I3
+Z3 VSV>:cQY9VdYH?85MYHcW81
+Z4 !s105 adder_16bit_sv_unit
+S1
+Z5 d/home/ecegrid/a/mg109/ece337/Lab3
+Z6 w1410466308
+Z7 8source/adder_16bit.sv
+Z8 Fsource/adder_16bit.sv
+L0 9
+Z9 OL;L;10.1b;51
+r1
+31
+Z10 !s90 -reportprogress|300|source/adder_16bit.sv|
+Z11 tCoverage 63 CoverExcludeDefault 1 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+Z12 !s100 9O>E>m?7KJfi<oF<_fc473
+Z13 !s108 1410466318.045085
+Z14 !s107 source/adder_16bit.sv|
+!i10b 1
+!s85 0
+vadder_1bit
+R1
+Z15 !s100 Y>080ghk2dMbSeC?dBJER3
+Z16 Ig<1k0bo0nZLzJ50bVfgE;3
+Z17 V2JLL>91Z<oU;X0S=zVjiK1
+Z18 !s105 adder_1bit_sv_unit
+S1
+R5
+Z19 w1410466843
+Z20 8source/adder_1bit.sv
+Z21 Fsource/adder_1bit.sv
+L0 10
+R9
+r1
+31
+Z22 !s90 -reportprogress|300|source/adder_1bit.sv|
+R11
+Z23 !s108 1410467816.305146
+Z24 !s107 source/adder_1bit.sv|
+!i10b 1
+!s85 0
+vadder_nbit
+R1
+Z25 !s100 dD5Klj:L1;18XLAoP0RnV2
+Z26 IBF=I0bIOl^CL3A>CV_]Ek2
+Z27 V_U=_A@9E>Z=;[Q9d;3GRE3
+Z28 !s105 adder_nbit_sv_unit
+S1
+R5
+Z29 w1410467762
+Z30 8source/adder_nbit.sv
+Z31 Fsource/adder_nbit.sv
+L0 9
+R9
+r1
+31
+Z32 !s90 -reportprogress|300|source/adder_nbit.sv|
+R11
+Z33 !s108 1410467881.988789
+Z34 !s107 source/adder_nbit.sv|
+!i10b 1
+!s85 0
+vflex_counter
+R1
+Z35 !s100 ao2HZg4oA6_QYf?SK[XA]2
+Z36 Ih:[2z:gLa>DZn^:g2Kn`F2
+Z37 V]UHBMdi:701aXiNBF;o463
+Z38 !s105 flex_counter_sv_unit
+S1
+R5
+Z39 w1411183597
+Z40 8source/flex_counter.sv
+Z41 Fsource/flex_counter.sv
+L0 9
+R9
+r1
+31
+Z42 !s90 -reportprogress|300|source/flex_counter.sv|
+R11
+Z43 !s108 1411184969.432900
+Z44 !s107 source/flex_counter.sv|
+!i10b 1
+!s85 0
+vflex_counter_8bit
+R1
+Z45 !s100 ?iB[>z?Rl@7f;T8?RS><o0
+Z46 IoI5X0lUeifJKUXMfUOPQ@3
+Z47 VECmf>VGc9l>FE6@W0fWC13
+Z48 !s105 flex_counter_8bit_sv_unit
+S1
+R5
+Z49 w1410645296
+Z50 8source/flex_counter_8bit.sv
+Z51 Fsource/flex_counter_8bit.sv
+L0 9
+R9
+r1
+31
+Z52 !s90 -reportprogress|300|source/flex_counter_8bit.sv|
+R11
+Z53 !s108 1411185003.971416
+Z54 !s107 source/flex_counter_8bit.sv|
+!i10b 1
+!s85 0
+vflex_pts_sr
+R1
+Z55 Il7`iV;jZgB;dW;f<0m;8O1
+Z56 VLV?WO`MQhBk;[`<NVaHdS3
+Z57 !s105 flex_pts_sr_sv_unit
+S1
+R5
+Z58 w1410639666
+Z59 8source/flex_pts_sr.sv
+Z60 Fsource/flex_pts_sr.sv
+L0 9
+R9
+r1
+31
+Z61 !s90 -reportprogress|300|source/flex_pts_sr.sv|
+R11
+Z62 !s100 <[OCf:eJo@:X]=?oGPncC2
+Z63 !s108 1410639668.458538
+Z64 !s107 source/flex_pts_sr.sv|
+!i10b 1
+!s85 0
+vflex_stp_sr
+R1
+Z65 IkJ9CI1KdQ>0jC3NG:?:Ez0
+Z66 VM;Q::J34zEjR^HV3Kn9SX3
+Z67 !s105 flex_stp_sr_sv_unit
+S1
+R5
+Z68 w1410637496
+Z69 8source/flex_stp_sr.sv
+Z70 Fsource/flex_stp_sr.sv
+L0 9
+R9
+r1
+31
+Z71 !s90 -reportprogress|300|source/flex_stp_sr.sv|
+R11
+Z72 !s100 e8[0YI5A2zQT2eJ@hI<WJ3
+Z73 !s108 1410637501.676482
+Z74 !s107 source/flex_stp_sr.sv|
+!i10b 1
+!s85 0
+vtb_adder_16bit
+R1
+Z75 I`X4<DVE_JnJO]@8:aH@<41
+Z76 VDVF2FGlHH_Yh=D9E8?28=2
+Z77 !s105 tb_adder_16bit_sv_unit
+S1
+R5
+Z78 w1410632760
+Z79 8source/tb_adder_16bit.sv
+Z80 Fsource/tb_adder_16bit.sv
+L0 6
+R9
+r1
+31
+Z81 !s90 -reportprogress|300|source/tb_adder_16bit.sv|
+R11
+Z82 !s100 A;[GKWY1GXdYOc=cd^0ZK2
+Z83 !s108 1410637498.386469
+Z84 !s107 source/tb_adder_16bit.sv|
+!i10b 1
+!s85 0
+vtb_flex_counter
+R1
+Z85 !s100 ^X115TUHf>I1P[Y@dFngE2
+Z86 I]m68<?fjP>bMl@SiJ:Zm=1
+Z87 V?Tg@IiaQ18XcMf;BUMODJ1
+Z88 !s105 tb_flex_counter_sv_unit
+S1
+R5
+Z89 w1411184886
+Z90 8source/tb_flex_counter.sv
+Z91 Fsource/tb_flex_counter.sv
+L0 11
+R9
+r1
+31
+Z92 !s90 -reportprogress|300|source/tb_flex_counter.sv|
+R11
+Z93 !s108 1411185019.144246
+Z94 !s107 source/tb_flex_counter.sv|
+!i10b 1
+!s85 0
+vtb_flex_counter_8bit
+R1
+Z95 Iad4K6a@>XJzL3^ieL=eHN2
+Z96 V9f=nzWC1nfZH9D70XKoJo3
+Z97 !s105 tb_flex_counter_8bit_sv_unit
+S1
+R5
+Z98 w1410711615
+Z99 8source/tb_flex_counter_8bit.sv
+Z100 Fsource/tb_flex_counter_8bit.sv
+L0 11
+R9
+r1
+31
+Z101 !s90 -reportprogress|300|source/tb_flex_counter_8bit.sv|
+R11
+Z102 !s100 5mNail5b@2AS7acd;PE@Q0
+Z103 !s108 1410711617.620100
+Z104 !s107 source/tb_flex_counter_8bit.sv|
+!i10b 1
+!s85 0
+Xtb_flex_counter_8bit_sv_unit
+R1
+Z105 Ib0Oa?eBF7K?ea6mJ`BA2P2
+Z106 Vb0Oa?eBF7K?ea6mJ`BA2P2
+S1
+R5
+Z107 w1410709417
+R99
+R100
+Z108 L0 337
+R9
+r1
+31
+Z109 !s108 1410709418.532807
+R104
+R101
+R11
+Z110 !s100 l;Ab=`_6NbLfg3ZE0_fQ[0
+!i10b 1
+!i103 1
+!s85 0

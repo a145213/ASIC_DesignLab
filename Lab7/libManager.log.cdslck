@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      mg109
+HostName                       ecegrid-thin4.ecn.purdue.edu
+ProcessIdentifier              32920
+ProcessCreationTime_UTC        1414094572
+ProcessCreationTime_Readable   Thu Oct 23 16:02:52 2014 EDT
+AppIdentifier                  /package/eda/cadence/IC5141.151/tools/dfII/bin/32bit/libManager.exe
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/ecegrid/a/mg109/ece337/Lab7/libManager.log
+TimeEditLocked                 Thu Oct 23 16:02:52 2014 EDT

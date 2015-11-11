@@ -1,0 +1,296 @@
+# //  ModelSim SE-64 10.1b Apr 26 2012 Linux 2.6.32-431.23.3.el6.x86_64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim +no_glitch_msg -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Class0.5u/ECE337_IP/vsim -coverage -i -t ps source_work.tb_adder_4bit 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_adder_4bit(fast)
+run 200 ns
+# ** Info: Correct Sum value for test case           0!
+#    Time: 10 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           0!
+#    Time: 10 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           1!
+#    Time: 20 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           1!
+#    Time: 20 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           2!
+#    Time: 30 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           2!
+#    Time: 30 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           3!
+#    Time: 40 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           3!
+#    Time: 40 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           4!
+#    Time: 50 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           4!
+#    Time: 50 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           5!
+#    Time: 60 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           5!
+#    Time: 60 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           6!
+#    Time: 70 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           6!
+#    Time: 70 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           7!
+#    Time: 80 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           7!
+#    Time: 80 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           8!
+#    Time: 90 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           8!
+#    Time: 90 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case           9!
+#    Time: 100 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case           9!
+#    Time: 100 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          10!
+#    Time: 110 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          10!
+#    Time: 110 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          11!
+#    Time: 120 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          11!
+#    Time: 120 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          12!
+#    Time: 130 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          12!
+#    Time: 130 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          13!
+#    Time: 140 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          13!
+#    Time: 140 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          14!
+#    Time: 150 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          14!
+#    Time: 150 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          15!
+#    Time: 160 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          15!
+#    Time: 160 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          16!
+#    Time: 170 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          16!
+#    Time: 170 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          17!
+#    Time: 180 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          17!
+#    Time: 180 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          18!
+#    Time: 190 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          18!
+#    Time: 190 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          19!
+#    Time: 200 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          19!
+#    Time: 200 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+run 500 ns
+# ** Info: Correct Sum value for test case          20!
+#    Time: 210 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          20!
+#    Time: 210 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          21!
+#    Time: 220 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          21!
+#    Time: 220 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          22!
+#    Time: 230 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          22!
+#    Time: 230 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          23!
+#    Time: 240 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          23!
+#    Time: 240 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          24!
+#    Time: 250 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          24!
+#    Time: 250 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          25!
+#    Time: 260 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          25!
+#    Time: 260 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          26!
+#    Time: 270 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          26!
+#    Time: 270 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          27!
+#    Time: 280 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          27!
+#    Time: 280 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          28!
+#    Time: 290 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          28!
+#    Time: 290 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          29!
+#    Time: 300 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          29!
+#    Time: 300 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          30!
+#    Time: 310 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          30!
+#    Time: 310 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          31!
+#    Time: 320 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          31!
+#    Time: 320 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          32!
+#    Time: 330 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          32!
+#    Time: 330 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          33!
+#    Time: 340 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          33!
+#    Time: 340 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          34!
+#    Time: 350 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          34!
+#    Time: 350 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          35!
+#    Time: 360 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          35!
+#    Time: 360 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          36!
+#    Time: 370 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          36!
+#    Time: 370 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          37!
+#    Time: 380 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          37!
+#    Time: 380 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          38!
+#    Time: 390 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          38!
+#    Time: 390 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          39!
+#    Time: 400 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          39!
+#    Time: 400 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          40!
+#    Time: 410 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          40!
+#    Time: 410 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          41!
+#    Time: 420 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          41!
+#    Time: 420 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          42!
+#    Time: 430 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          42!
+#    Time: 430 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          43!
+#    Time: 440 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          43!
+#    Time: 440 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          44!
+#    Time: 450 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          44!
+#    Time: 450 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          45!
+#    Time: 460 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          45!
+#    Time: 460 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          46!
+#    Time: 470 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          46!
+#    Time: 470 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          47!
+#    Time: 480 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          47!
+#    Time: 480 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          48!
+#    Time: 490 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          48!
+#    Time: 490 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          49!
+#    Time: 500 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          49!
+#    Time: 500 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          50!
+#    Time: 510 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          50!
+#    Time: 510 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          51!
+#    Time: 520 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          51!
+#    Time: 520 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          52!
+#    Time: 530 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          52!
+#    Time: 530 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          53!
+#    Time: 540 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          53!
+#    Time: 540 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          54!
+#    Time: 550 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          54!
+#    Time: 550 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          55!
+#    Time: 560 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          55!
+#    Time: 560 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          56!
+#    Time: 570 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          56!
+#    Time: 570 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          57!
+#    Time: 580 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          57!
+#    Time: 580 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          58!
+#    Time: 590 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          58!
+#    Time: 590 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          59!
+#    Time: 600 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          59!
+#    Time: 600 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          60!
+#    Time: 610 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          60!
+#    Time: 610 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          61!
+#    Time: 620 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          61!
+#    Time: 620 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          62!
+#    Time: 630 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          62!
+#    Time: 630 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          63!
+#    Time: 640 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          63!
+#    Time: 640 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          64!
+#    Time: 650 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          64!
+#    Time: 650 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          65!
+#    Time: 660 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          65!
+#    Time: 660 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          66!
+#    Time: 670 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          66!
+#    Time: 670 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          67!
+#    Time: 680 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          67!
+#    Time: 680 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          68!
+#    Time: 690 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          68!
+#    Time: 690 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# ** Info: Correct Sum value for test case          69!
+#    Time: 700 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 68
+# ** Info: Correct Carry Out value for test case          69!
+#    Time: 700 ns  Scope: tb_adder_4bit File: source/tb_adder_4bit.sv Line: 78
+# This test bench was not run long enough to execute all test cases. Please run this test bench for at least a total of        5120 ns

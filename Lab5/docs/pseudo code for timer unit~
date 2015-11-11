@@ -1,0 +1,19 @@
+Pseudo Code for Timer Unit
+
+
+if (count1 = 1; count < 10; count++)
+      shift_strobe = 0
+      bit_count_enable = 0
+
+	if (count2 = 1; count < 10; count++)
+		shift_strobe = 1
+		bit_count_enable = 1
+		
+
+	if count1 = 9
+		packet_done = 1
+
+
+shift_strobe = 0
+bit_count_enable = 0
+packet_done = 0

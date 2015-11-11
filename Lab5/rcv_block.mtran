@@ -1,0 +1,776 @@
+# //  ModelSim SE-64 10.1b Apr 26 2012 Linux 2.6.32-431.29.2.el6.x86_64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim +no_glitch_msg -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB -Lf /home/ecegrid/a/ece337/Class0.5u/ECE337_IP/vsim -coverage -i -t ps mapped_work.tb_rcv_block 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: mapped/rcv_block.v(174): (vopt-2685) [TFMPC] - Too few port connections for 'CLK_CNT'.  Expected 7, found 6.
+# ** Warning: mapped/rcv_block.v(174): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: mapped/rcv_block.v(177): (vopt-2685) [TFMPC] - Too few port connections for 'BIT_CNT'.  Expected 7, found 6.
+# ** Warning: mapped/rcv_block.v(177): (vopt-2718) [TFMPC] - Missing connection for port 'count_out'.
+# ** Warning: source/tb_rcv_block.sv(79): (vopt-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 11, found 8.
+# ** Warning: source/tb_rcv_block.sv(79): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: source/tb_rcv_block.sv(79): (vopt-2718) [TFMPC] - Missing connection for port 'packet_done'.
+# ** Warning: source/tb_rcv_block.sv(79): (vopt-2718) [TFMPC] - Missing connection for port 'shift_strobe'.
+# Loading sv_std.std
+# Loading work.tb_rcv_block(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx4(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx8(behavioral)#1
+add wave *
+ns
+# invalid command name "ns"
+run 20000 ns
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 8.938 ns
+#    Time: 8938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 11910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 12050 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 58.938 ns
+#    Time: 58938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 61910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 61948 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 108.938 ns
+#    Time: 108938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 111910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 112046 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 158.938 ns
+#    Time: 158938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 161910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 161945 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 1: Test data correctly received
+#    Time: 308750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 218
+# ** Info: Test case 1: DUT correctly shows no framing error
+#    Time: 308750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 222
+# ** Info: Test case 1: DUT correctly asserted the data ready flag
+#    Time: 308750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 226
+# ** Info: Test case 1: DUT correctly shows no overrun error
+#    Time: 308750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 230
+# ** Info: Test case 1: DUT correctly cleared the data ready flag
+#    Time: 312500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 245
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 321.438 ns
+#    Time: 321438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 324410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 324527 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 2: Test data correctly received
+#    Time: 609250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 218
+# ** Info: Test case 2: DUT correctly shows no framing error
+#    Time: 609250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 222
+# ** Info: Test case 2: DUT correctly asserted the data ready flag
+#    Time: 609250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 226
+# ** Info: Test case 2: DUT correctly shows no overrun error
+#    Time: 609250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 230
+# ** Info: Test case 2: DUT correctly cleared the data ready flag
+#    Time: 612500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 245
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 621.438 ns
+#    Time: 621438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 624410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 624509 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 3: Test data correctly received
+#    Time: 933250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 218
+# ** Info: Test case 3: DUT correctly shows no framing error
+#    Time: 933250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 222
+# ** Info: Test case 3: DUT correctly asserted the data ready flag
+#    Time: 933250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 226
+# ** Info: Test case 3: DUT correctly shows no overrun error
+#    Time: 933250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 230
+# ** Info: Test case 3: DUT correctly cleared the data ready flag
+#    Time: 937500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 245
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 951.438 ns
+#    Time: 951438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 954410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 954519 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1026.438 ns
+#    Time: 1026438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1029410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 1029431 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1076.438 ns
+#    Time: 1076438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1079410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 1079544 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1126.438 ns
+#    Time: 1126438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1129410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 1129536 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 4: Test data correctly thrown away
+#    Time: 1251250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 277
+# ** Info: Test case 4: DUT correctly shows no framing error
+#    Time: 1251250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 281
+# ** Info: Test case 4: DUT correctly asserted the data ready flag
+#    Time: 1251250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 285
+# ** Info: Test case 4: DUT correctly shows no overrun error
+#    Time: 1251250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 289
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1308.938 ns
+#    Time: 1308938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1311910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 1312018 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1383.938 ns
+#    Time: 1383938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1386910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 1386989 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 5.5: Test data correctly received
+#    Time: 1558750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 318
+# ** Info: Test case 5.5: DUT correctly shows no framing error
+#    Time: 1558750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 322
+# ** Info: Test case 5.5: DUT correctly asserted the data ready flag
+#    Time: 1558750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 326
+# ** Info: Test case 5.5: DUT correctly shows no overrun error
+#    Time: 1558750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 330
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1563.938 ns
+#    Time: 1563938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1566910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 1567025 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1613.938 ns
+#    Time: 1613938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1616910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 1616977 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1688.938 ns
+#    Time: 1688938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1691910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 1692039 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 5: Test data correctly received
+#    Time: 1863750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 352
+# ** Info: Test case 5: DUT correctly shows no framing error
+#    Time: 1863750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 356
+# ** Info: Test case 5: DUT correctly asserted the data ready flag
+#    Time: 1863750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 360
+# ** Info: Test case 5: DUT correctly shows overrun error
+#    Time: 1863750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 364
+# ** Info: Test case 5: DUT correctly cleared the data ready flag
+#    Time: 1867500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 379
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 1881.438 ns
+#    Time: 1881438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 1884410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 1884439 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2001.438 ns
+#    Time: 2001438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2004410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 2004499 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case      6: Test data correctly received
+#    Time: 2150250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 413
+# ** Info: Test case      6: DUT correctly shows no framing error
+#    Time: 2150250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 417
+# ** Info: Test case      6: DUT correctly asserted the data ready flag
+#    Time: 2150250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 421
+# ** Info: Test case      6: DUT correctly shows no overrun error
+#    Time: 2150250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 425
+# ** Info: Test case      6: DUT correctly cleared the data ready flag
+#    Time: 2155 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 440
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2158.938 ns
+#    Time: 2158938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2161910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2162003 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2283.938 ns
+#    Time: 2283938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2286910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2286938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2333.938 ns
+#    Time: 2333938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2336910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2337002 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case      7: Test data correctly received
+#    Time: 2438750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 413
+# ** Info: Test case      7: DUT correctly shows no framing error
+#    Time: 2438750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 417
+# ** Info: Test case      7: DUT correctly asserted the data ready flag
+#    Time: 2438750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 421
+# ** Info: Test case      7: DUT correctly shows no overrun error
+#    Time: 2438750 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 425
+# ** Info: Test case      7: DUT correctly cleared the data ready flag
+#    Time: 2442500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 440
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2446.438 ns
+#    Time: 2446438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2449410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2449506 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2576.438 ns
+#    Time: 2576438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2579410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2579491 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case      8: Test data was not correctly received
+#    Time: 2737250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 415
+# ** Info: Test case      8: DUT correctly shows no framing error
+#    Time: 2737250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 417
+# ** Info: Test case      8: DUT correctly asserted the data ready flag
+#    Time: 2737250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 421
+# ** Info: Test case      8: DUT correctly shows no overrun error
+#    Time: 2737250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 425
+# ** Info: Test case      8: DUT correctly cleared the data ready flag
+#    Time: 2740 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 440
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 2753.938 ns
+#    Time: 2753938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 2756910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 2757021 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 9.0: Test data correctly received
+#    Time: 3046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 470
+# ** Info: Test case 9.0: DUT correctly shows no framing error
+#    Time: 3046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.0: DUT correctly asserted the data ready flag
+#    Time: 3046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.0: DUT correctly shows no overrun error
+#    Time: 3046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 3050 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 3053.938 ns
+#    Time: 3053938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 3056910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 3056996 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.1: Test data was not correctly received
+#    Time: 3346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.1: DUT correctly shows no framing error
+#    Time: 3346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.1: DUT correctly asserted the data ready flag
+#    Time: 3346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.1: DUT correctly shows no overrun error
+#    Time: 3346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 3350 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 3353.938 ns
+#    Time: 3353938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 3356910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 3356996 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.2: Test data was not correctly received
+#    Time: 3646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.2: DUT correctly shows no framing error
+#    Time: 3646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.2: DUT correctly asserted the data ready flag
+#    Time: 3646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.2: DUT correctly shows no overrun error
+#    Time: 3646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 3650 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 3653.938 ns
+#    Time: 3653938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 3656910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 3656950 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.3: Test data was not correctly received
+#    Time: 3946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.3: DUT correctly shows no framing error
+#    Time: 3946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.3: DUT correctly asserted the data ready flag
+#    Time: 3946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.3: DUT correctly shows no overrun error
+#    Time: 3946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 3950 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 3953.938 ns
+#    Time: 3953938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 3956910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 3957034 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.4: Test data was not correctly received
+#    Time: 4246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.4: DUT correctly shows no framing error
+#    Time: 4246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.4: DUT correctly asserted the data ready flag
+#    Time: 4246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.4: DUT correctly shows no overrun error
+#    Time: 4246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 4250 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 4253.938 ns
+#    Time: 4253938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 4256910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 4257033 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.5: Test data was not correctly received
+#    Time: 4546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.5: DUT correctly shows no framing error
+#    Time: 4546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.5: DUT correctly asserted the data ready flag
+#    Time: 4546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.5: DUT correctly shows no overrun error
+#    Time: 4546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 4550 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 4553.938 ns
+#    Time: 4553938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 4556910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 4556999 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.6: Test data was not correctly received
+#    Time: 4846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.6: DUT correctly shows no framing error
+#    Time: 4846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.6: DUT correctly asserted the data ready flag
+#    Time: 4846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.6: DUT correctly shows no overrun error
+#    Time: 4846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 4850 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 4853.938 ns
+#    Time: 4853938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 4856910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 4857031 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.7: Test data was not correctly received
+#    Time: 5146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.7: DUT correctly shows no framing error
+#    Time: 5146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.7: DUT correctly asserted the data ready flag
+#    Time: 5146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.7: DUT correctly shows no overrun error
+#    Time: 5146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 5150 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 5153.938 ns
+#    Time: 5153938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5156910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 5157050 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.8: Test data was not correctly received
+#    Time: 5446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.8: DUT correctly shows no framing error
+#    Time: 5446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.8: DUT correctly asserted the data ready flag
+#    Time: 5446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.8: DUT correctly shows no overrun error
+#    Time: 5446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 5450 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 5453.938 ns
+#    Time: 5453938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5456910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 5457028 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.9: Test data was not correctly received
+#    Time: 5746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.9: DUT correctly shows no framing error
+#    Time: 5746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.9: DUT correctly asserted the data ready flag
+#    Time: 5746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.9: DUT correctly shows no overrun error
+#    Time: 5746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 5750 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 5753.938 ns
+#    Time: 5753938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 5756910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 5756941 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.10: Test data was not correctly received
+#    Time: 6046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.10: DUT correctly shows no framing error
+#    Time: 6046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.10: DUT correctly asserted the data ready flag
+#    Time: 6046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.10: DUT correctly shows no overrun error
+#    Time: 6046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 6050 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 6053.938 ns
+#    Time: 6053938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 6056910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 6057003 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.11: Test data was not correctly received
+#    Time: 6346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.11: DUT correctly shows no framing error
+#    Time: 6346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.11: DUT correctly asserted the data ready flag
+#    Time: 6346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.11: DUT correctly shows no overrun error
+#    Time: 6346250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 6350 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 6353.938 ns
+#    Time: 6353938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 6356910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 6356951 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.12: Test data was not correctly received
+#    Time: 6646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.12: DUT correctly shows no framing error
+#    Time: 6646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.12: DUT correctly asserted the data ready flag
+#    Time: 6646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.12: DUT correctly shows no overrun error
+#    Time: 6646250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 6650 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 6653.938 ns
+#    Time: 6653938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 6656910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 6657044 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.13: Test data was not correctly received
+#    Time: 6946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.13: DUT correctly shows no framing error
+#    Time: 6946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.13: DUT correctly asserted the data ready flag
+#    Time: 6946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.13: DUT correctly shows no overrun error
+#    Time: 6946250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 6950 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 6953.938 ns
+#    Time: 6953938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 6956910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 6957025 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.14: Test data was not correctly received
+#    Time: 7246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.14: DUT correctly shows no framing error
+#    Time: 7246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.14: DUT correctly asserted the data ready flag
+#    Time: 7246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.14: DUT correctly shows no overrun error
+#    Time: 7246250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 7250 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 7253.938 ns
+#    Time: 7253938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 7256910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 7257036 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.15: Test data was not correctly received
+#    Time: 7546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.15: DUT correctly shows no framing error
+#    Time: 7546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.15: DUT correctly asserted the data ready flag
+#    Time: 7546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.15: DUT correctly shows no overrun error
+#    Time: 7546250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 7550 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 7553.938 ns
+#    Time: 7553938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 7556910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 7556953 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.16: Test data was not correctly received
+#    Time: 7846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.16: DUT correctly shows no framing error
+#    Time: 7846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.16: DUT correctly asserted the data ready flag
+#    Time: 7846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.16: DUT correctly shows no overrun error
+#    Time: 7846250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 7850 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 7853.938 ns
+#    Time: 7853938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 7856910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 7856963 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.17: Test data was not correctly received
+#    Time: 8146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.17: DUT correctly shows no framing error
+#    Time: 8146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.17: DUT correctly asserted the data ready flag
+#    Time: 8146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.17: DUT correctly shows no overrun error
+#    Time: 8146250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 8150 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 8153.938 ns
+#    Time: 8153938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 8156910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 8157046 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.18: Test data was not correctly received
+#    Time: 8446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.18: DUT correctly shows no framing error
+#    Time: 8446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.18: DUT correctly asserted the data ready flag
+#    Time: 8446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.18: DUT correctly shows no overrun error
+#    Time: 8446250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 8450 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 8453.938 ns
+#    Time: 8453938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 8456910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 8456992 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.19: Test data was not correctly received
+#    Time: 8746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.19: DUT correctly shows no framing error
+#    Time: 8746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.19: DUT correctly asserted the data ready flag
+#    Time: 8746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.19: DUT correctly shows no overrun error
+#    Time: 8746250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 8750 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 8753.938 ns
+#    Time: 8753938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 8756910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 8756993 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Error: Test case 9.20: Test data was not correctly received
+#    Time: 9046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 472
+# ** Info: Test case 9.20: DUT correctly shows no framing error
+#    Time: 9046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 474
+# ** Info: Test case 9.20: DUT correctly asserted the data ready flag
+#    Time: 9046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 478
+# ** Info: Test case 9.20: DUT correctly shows no overrun error
+#    Time: 9046250 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 482
+# ** Info: Test case      9: DUT correctly cleared the data ready flag
+#    Time: 9050 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 497
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9063.938 ns
+#    Time: 9063938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9066910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 9066938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9138.938 ns
+#    Time: 9138938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9141910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9141943 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9238.938 ns
+#    Time: 9238938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9241910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9241942 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 10.1: Test data correctly received
+#    Time: 9340500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 540
+# ** Info: Test case 10.1: DUT correctly shows no framing error
+#    Time: 9340500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 544
+# ** Info: Test case 10.1: DUT correctly asserted the data ready flag
+#    Time: 9340500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 548
+# ** Info: Test case 10.1: DUT correctly shows no overrun error
+#    Time: 9340500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 552
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9343.938 ns
+#    Time: 9343938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9346910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9346990 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9418.938 ns
+#    Time: 9418938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9421910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 9421990 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9518.938 ns
+#    Time: 9518938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9521910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9522033 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 10.2: Test data correctly received
+#    Time: 9620500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 586
+# ** Info: Test case 10.2: DUT correctly shows no framing error
+#    Time: 9620500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 590
+# ** Info: Test case 10.2: DUT correctly asserted the data ready flag
+#    Time: 9620500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 594
+# ** Info: Test case 10.2: DUT correctly shows overrun error
+#    Time: 9620500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 598
+# ** Info: Test case 10.2: DUT correctly cleared the data ready flag
+#    Time: 9625 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 612
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9628.938 ns
+#    Time: 9628938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9631910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 9632012 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9678.938 ns
+#    Time: 9678938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9681910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 9682038 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9728.938 ns
+#    Time: 9728938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9731910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9731992 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9853.938 ns
+#    Time: 9853938 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9856910 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9856957 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 10.3: Test data correctly thrown away
+#    Time: 9905500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 647
+# ** Info: Test case 10.3: DUT correctly shows a framing error
+#    Time: 9905500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 651
+# ** Info: Test case 10.3: DUT correctly asserted the data ready flag
+#    Time: 9905500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 655
+# ** Info: Test case 10.3: DUT correctly shows no overrun error
+#    Time: 9905500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 659
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9911.438 ns
+#    Time: 9911438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9914410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '0' value
+#    Time: 9914540 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 9961.438 ns
+#    Time: 9961438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 9964410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 9964440 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: */DFFSR_CORE HOLD High VIOLATION ON D WITH RESPECT TO CLK;
+#   Expected := 0.094 ns; Observed := 0 ns; At : 10011.438 ns
+#    Time: 10011438 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/sync_phase_reg/CELL_CORE
+# ** Warning: DFFSR instance grabbed an invalid value and is propagating a metastable value
+#    Time: 10014410 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Warning: DFFSR instance metastable output value decayed to a '1' value
+#    Time: 10014447 ps  Iteration: 0  Instance: /tb_rcv_block/DUT/START_BIT/new_sample_reg
+# ** Info: Test case 10.4: Test data correctly thrown away
+#    Time: 10188 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 709
+# ** Info: Test case 10.4: DUT correctly shows a framing error
+#    Time: 10188 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 713
+# ** Info: Test case 10.4: DUT correctly asserted the data ready flag
+#    Time: 10188 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 717
+# ** Info: Test case 10.4: DUT correctly shows no overrun error
+#    Time: 10188 ns  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 721
+# ** Info: Test case 10.4: DUT correctly cleared the data ready flag
+#    Time: 10192500 ps  Scope: tb_rcv_block.TEST_PROC File: source/tb_rcv_block.sv Line: 734
+run 2000 ns

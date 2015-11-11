@@ -1,0 +1,125 @@
+// $Id: $
+// File name:   rcu.sv
+// Created:     9/27/2014
+// Author:      Allen Chien
+// Lab Section: 337-04
+// Version:     1.0  Initial Design Entry
+// Description: Receiver Control Unit
+
+module rcu (
+  input wire clk,
+  input wire n_rst,
+  input wire start_bit_detected,
+  input wire packet_done,
+  input wire framing_error,
+  output wire sbc_clear,
+  output wire sbc_enable,
+  output wire load_buffer,
+  output wire enable_timer,
+  output wire [3:0] state
+);
+
+typedef enum bit [3:0] {
+  st_idle,
+  st_start,
+  st_load,
+  st_receive,
+  st_stop
+} stateType;
+
+stateType cur_state;
+stateType nxt_state;
+assign state = cur_state;
+reg sbc_clear_flag;
+reg sbc_enable_flag;
+reg load_buffer_flag;
+reg enable_timer_flag;
+assign sbc_clear = sbc_clear_flag;
+assign sbc_enable = sbc_enable_flag;
+assign load_buffer = load_buffer_flag;
+assign enable_timer = enable_timer_flag;
+
+always_ff @ (posedge clk, negedge n_rst)
+begin
+  if(n_rst == 1'b0)
+    begin
+      cur_state <= st_idle;
+    end
+  else
+    begin
+      cur_state <= nxt_state;
+    end
+end
+
+always_comb
+begin
+  nxt_state = cur_state;
+  sbc_clear_flag = 0;
+  sbc_enable_flag = 0;
+  load_buffer_flag = 0;
+  enable_timer_flag = 0;
+  
+  case(cur_state)
+    st_idle:
+    begin
+      sbc_clear_flag = 0;
+      sbc_enable_flag = 0;
+      load_buffer_flag = 0;
+      enable_timer_flag = 0;
+        
+      if(start_bit_detected == 1)
+        nxt_state = st_start;
+      else
+        nxt_state = st_idle;
+    end
+      
+    st_start:
+    begin
+      sbc_clear_flag = 1;
+      sbc_enable_flag = 0;
+      load_buffer_flag = 0;
+      enable_timer_flag = 1;  
+      
+      if(packet_done == 1)
+        nxt_state = st_receive;
+      else
+        nxt_state = st_start;
+    end
+    
+    st_receive:
+    begin
+      sbc_clear_flag = 0;
+      sbc_enable_flag = 1;
+      load_buffer_flag = 0;
+      enable_timer_flag = 0;
+      nxt_state = st_stop;
+    end
+  
+    st_stop:
+    begin
+      sbc_clear_flag = 0;
+      sbc_enable_flag = 0;
+      load_buffer_flag = 0;
+      enable_timer_flag = 0;
+      
+      if(framing_error == 1)
+        nxt_state = st_idle;
+      else
+        nxt_state = st_load;
+    end
+        
+    st_load:
+    begin
+      sbc_clear_flag = 0;
+      sbc_enable_flag = 0;
+      load_buffer_flag = 1;
+      enable_timer_flag = 0;
+      
+      nxt_state = st_idle;
+    end
+    
+   
+  endcase
+end 
+
+endmodule   
